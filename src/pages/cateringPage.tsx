@@ -15,8 +15,8 @@ const CateringPage = () => {
           <h1 className="text-5xl font-bold text-white drop-shadow-lg mb-4">
             CATERING
           </h1>
-          <p className="text-xl text-white drop-shadow mb-6">
-            {heroContent.heading}
+          <p className="text-xl text-white drop-shadow mb-6 bg-red-600">
+            {heroContent.heading}aaa
           </p>
           <p className="text-lg text-white drop-shadow mb-8">
             {heroContent.tagline}

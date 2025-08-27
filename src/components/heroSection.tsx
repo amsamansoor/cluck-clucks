@@ -19,7 +19,7 @@ const HeroSection = ({ heading, tagline, orderLink, requestLink }: Props) => {
       {/* Content */}
       <div className="relative z-10 h-full flex items-center justify-center">
         <div className="max-w-3xl px-4 text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight bg-red-600">
             {heading}
           </h1>
           <p className="mt-4 md:mt-6 text-sm md:text-lg leading-relaxed">{tagline}</p>
