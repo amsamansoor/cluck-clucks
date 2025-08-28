@@ -6,7 +6,7 @@ import bgImg from "../assets/images/cluck-background.jpg";
 
 const CateringPage = () => {
   return (
-    <div className="relative min-h-screen flex flex-col items-center bg-gray-100">
+    <div className="relative min-h-screen flex flex-col ">
       {/* Hero Section - Patterned Red Squares Background */}
       <div
         className="w-full h-72 md:h-96 flex items-center justify-center relative pt-24"
@@ -29,16 +29,10 @@ const CateringPage = () => {
 
       {/* Section 2 - Split layout */}
       <div
-  className="w-full py-16 flex flex-col md:flex-row max-w-6xl mx-auto gap-12 items-center justify-between bg-fixed bg-cover bg-center"
-        // style={{
-        //   backgroundImage: `url(${bgImg})`,
-        //   backgroundAttachment: "fixed",
-        //   backgroundPosition: "center",
-        //   backgroundSize: "cover",
-        // }}
+        className="w-full py-16 flex flex-col md:flex-row max-w-6xl mx-auto gap-12 items-center justify-between bg-fixed bg-cover bg-center"
       >
         {/* Left: Content */}
-  <div className="flex-1 flex flex-col justify-center items-start text-left pt-16 md:justify-center md:h-full">
+        <div className="flex-1 flex flex-col justify-center items-start text-left pt-16 md:justify-center md:h-full">
           <h2 className="text-orange-600 text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
             BIRTHDAY? WEDDING? OFFICE PARTY?
           </h2>
@@ -77,7 +71,7 @@ const CateringPage = () => {
             src={heroImg}
             alt="Catering Hero"
             className="w-full h-[600px] max-w-2xl rounded-2xl object-cover shadow-lg"
-            style={{height: '600px'}}
+            style={{ height: '600px' }}
           />
         </div>
       </div>
@@ -92,7 +86,7 @@ const CateringPage = () => {
       </div>
 
       {/* Section 4 - Catering Form */}
-      <div className="w-full py-16 bg-white">
+      <div className="w-full py-16">
         <CateringForm />
       </div>
     </div>
