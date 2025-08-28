@@ -29,7 +29,7 @@ const CateringPage = () => {
 
       {/* Section 2 - Split layout */}
       <div
-        className="w-full py-16 flex flex-col md:flex-row max-w-6xl mx-auto gap-12 items-center justify-between bg-fixed bg-cover bg-center"
+        className="w-full py-16 flex flex-col md:flex-row max-w-7xl mx-auto gap-15 items-center justify-between bg-fixed bg-cover bg-center"
       >
         {/* Left: Content */}
         <div className="flex-1 flex flex-col justify-center items-start text-left pt-16 md:justify-center md:h-full">
@@ -70,18 +70,16 @@ const CateringPage = () => {
           <img
             src={heroImg}
             alt="Catering Hero"
-            className="w-full h-[600px] max-w-2xl rounded-2xl object-cover shadow-lg"
-            style={{ height: '600px' }}
+            className="w-full h-[800px] max-w-2xl rounded-2xl object-cover shadow-lg"
+            style={{ height: '800px' }}
           />
         </div>
       </div>
 
       {/* Section 3 - Images Grid */}
       <div className="w-full py-16">
-        <div className="max-w-6xl mx-auto px-2 md:px-6">
-          <div className="w-full">
-            <CateringImages />
-          </div>
+        <div className="w-full">
+          <CateringImages />
         </div>
       </div>
 
