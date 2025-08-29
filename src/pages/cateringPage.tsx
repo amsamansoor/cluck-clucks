@@ -14,9 +14,9 @@ const CateringPage = () => {
         className="w-full h-72 md:h-96 flex items-center justify-center relative pt-24"
         style={{
           background:
-            `linear-gradient(90deg, #ea4c2a 1px, transparent 1px, transparent 60px),` +
-            `linear-gradient(0deg, #ea4c2a 1px, transparent 1px, transparent 60px),` +
-            `#f55a3a`,
+            `linear-gradient(90deg, #E4563A 3px, transparent 3px, transparent 60px),` +
+            `linear-gradient(0deg, #E4563A 3px, transparent 3px, transparent 60px),` +
+            `#F15C3E`,
           backgroundSize: "60px 60px",
           boxShadow: "0 2px 8px rgba(0,0,0,0.02)",
         }}
@@ -46,16 +46,16 @@ const CateringPage = () => {
         <div className="relative w-full py-12 flex flex-col md:flex-row max-w-7xl mx-auto gap-10 items-center justify-between">
           {/* Left Content */}
           <div className="flex-1 flex flex-col justify-center items-start text-left">
-            <h2 className="text-red-500 text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+            <h2 className="text-[#F15B40] text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
               BIRTHDAY? WEDDING? OFFICE PARTY?
             </h2>
-            <p className="text-amber-900 text-lg mb-8 leading-relaxed">
+            <p className="text-[#984105] text-lg mb-8 leading-relaxed">
               Birthday? Wedding? Office party? No problem! We cater to all.
               Cluck Clucks is your go-to for great chicken. It's so good your
               guests will be cluckin' for joy! Let us cater your next event and
               watch as we turn every bite into a feast for the tastebuds! Fill
               out the form below or send us an email at{" "}
-              <span className="text-red-500 font-bold">
+              <span className="text-[#F15B40] font-bold">
                 Hello@cluckclucks.ca
               </span>
               .
@@ -65,7 +65,7 @@ const CateringPage = () => {
               <div>
                 <button
                   className="flex items-center font-bold transform transition-all duration-300 
-                    text-red-500 border-b-2 border-red-500 
+                    text-[#EF4325] border-b-2 border-[#EF4325] 
                     hover:scale-110 hover:text-[#5c2c00] hover:border-[#5c2c00] text-[18px]"
                 >
                   Order Now <span className="ml-6">&raquo;</span>
@@ -75,7 +75,7 @@ const CateringPage = () => {
               <div>
                 <button
                   className="flex items-center font-bold transform transition-all duration-300 
-                    text-red-500 border-b-2 border-red-500 
+                    text-[#EF4325] border-b-2 border-[#EF4325] 
                     hover:scale-110 hover:text-[#5c2c00] hover:border-[#5c2c00] text-[20px]"
                 >
                   Request A Special Catering Order{" "}
@@ -97,12 +97,11 @@ const CateringPage = () => {
       </div>
 
       {/* ✅ Section 3 - Parallax Background with Images */}
-      <div className="w-full bg-amber-400 py-4">
+      <div className="w-full bg-[#F3C317] py-4">
         <CateringImages />
       </div>
 
       {/* Section 4 - Catering Form */}
-      {/* Section 4 - Catering Form with fixed background logos */}
       <div
         className="relative w-full py-10 bg-fixed bg-no-repeat bg-[length:auto_900px,contain] 
              bg-[position:bottom_left,bottom_right]"
