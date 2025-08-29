@@ -1,13 +1,13 @@
 import React from "react";
+import { Parallax } from "react-parallax";
 import CateringImages from "../components/cateringImages";
 import CateringForm from "../components/cateringForm";
 import heroImg from "../assets/images/hero-image.jpg";
-import bgImg from "../assets/images/cluck-background.jpg";
-
+import parallaxImg from "../assets/images/cluck-background1.jpg"; 
 const CateringPage = () => {
   return (
-    <div className="relative min-h-screen flex flex-col ">
-      {/* Hero Section - Patterned Red Squares Background */}
+    <div className="relative min-h-screen flex flex-col">
+      {/* Hero Section */}
       <div
         className="w-full h-72 md:h-96 flex items-center justify-center relative pt-24"
         style={{
@@ -28,11 +28,9 @@ const CateringPage = () => {
       </div>
 
       {/* Section 2 - Split layout */}
-      <div
-        className="w-full py-16 flex flex-col md:flex-row max-w-7xl mx-auto gap-15 items-center justify-between bg-fixed bg-cover bg-center"
-      >
-        {/* Left: Content */}
-        <div className="flex-1 flex flex-col justify-center items-start text-left pt-16 md:justify-center md:h-full">
+      <div className="w-full py-12 flex flex-col md:flex-row max-w-7xl mx-auto gap-10 items-center justify-between">
+        {/* Left Content */}
+        <div className="flex-1 flex flex-col justify-center items-start text-left">
           <h2 className="text-orange-600 text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
             BIRTHDAY? WEDDING? OFFICE PARTY?
           </h2>
@@ -50,14 +48,14 @@ const CateringPage = () => {
 
           <div className="space-y-8 w-full">
             <div>
-              <button className="flex items-center text-orange-600 font-bold text-xl group">
+              <button className="flex items-center text-orange-600 font-bold text-xl group hover:underline hover:underline-offset-4">
                 Order Now <span className="ml-2">&raquo;</span>
               </button>
               <div className="w-32 h-1 bg-orange-600 mt-2"></div>
             </div>
 
             <div>
-              <button className="flex items-center text-orange-600 font-bold text-xl group">
+              <button className="flex items-center text-orange-600 font-bold text-xl group hover:underline hover:underline-offset-4">
                 Request A Special Catering Order <span className="ml-2">&raquo;</span>
               </button>
               <div className="w-56 h-1 bg-orange-600 mt-2"></div>
@@ -65,26 +63,29 @@ const CateringPage = () => {
           </div>
         </div>
 
-        {/* Right: Image */}
+        {/* Right Image */}
         <div className="flex-1 flex justify-center items-stretch">
           <img
             src={heroImg}
             alt="Catering Hero"
-            className="w-full h-[800px] max-w-2xl rounded-2xl object-cover shadow-lg"
-            style={{ height: '800px' }}
+            className="w-full h-[400px] md:h-[700px] max-w-2xl rounded-2xl object-cover shadow-lg"
           />
         </div>
       </div>
 
-      {/* Section 3 - Images Grid */}
-      <div className="w-full py-16">
-        <div className="w-full">
+      {/* ✅ Section 3 - Parallax Background with Images */}
+      <Parallax
+        bgImage={parallaxImg}
+        strength={400}
+        className="w-full"
+      >
+        <div className="w-full py-16 bg-black/40">
           <CateringImages />
         </div>
-      </div>
+      </Parallax>
 
       {/* Section 4 - Catering Form */}
-      <div className="w-full py-16">
+      <div className="w-full py-10">
         <CateringForm />
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/navbar";
-import CateringPage from "./pages/CateringPage";
+import CateringPage from "./pages/cateringPage";
 
 function App() {
   return (
