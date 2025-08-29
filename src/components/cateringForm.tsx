@@ -3,9 +3,9 @@ import React from "react";
 const CateringForm = () => {
   return (
     <section className="w-full py-1 px-1">
-  <div className="max-w-4xl mx-auto border-3 border-[#F15A40] p-4" style={{ boxSizing: 'border-box' }}>
+  <div className="max-w-4xl mx-auto border-3 border-[#db5038] p-4" style={{ boxSizing: 'border-box' }}>
         {/* Heading */}
-        <h2 className="text-3xl md:text-5xl font-extrabold text-orange-600 mb-10 text-center uppercase tracking-wide">
+        <h2 className="text-3xl md:text-5xl font-extrabold text-red-500 mb-10 text-center uppercase tracking-wide">
           Catering Request Form
         </h2>
 

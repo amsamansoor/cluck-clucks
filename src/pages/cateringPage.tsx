@@ -3,7 +3,9 @@ import { Parallax } from "react-parallax";
 import CateringImages from "../components/cateringImages";
 import CateringForm from "../components/cateringForm";
 import heroImg from "../assets/images/hero-image.jpg";
-import parallaxImg from "../assets/images/cluck-background1.jpg"; 
+import parallaxImg from "../assets/images/cluck-background1.jpg";
+import parallaxImg2 from "../assets/images/para-background2.jpg";
+
 const CateringPage = () => {
   return (
     <div className="relative min-h-screen flex flex-col">
@@ -28,66 +30,80 @@ const CateringPage = () => {
       </div>
 
       {/* Section 2 - Split layout */}
-      <div className="w-full py-12 flex flex-col md:flex-row max-w-7xl mx-auto gap-10 items-center justify-between">
-        {/* Left Content */}
-        <div className="flex-1 flex flex-col justify-center items-start text-left">
-          <h2 className="text-orange-600 text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
-            BIRTHDAY? WEDDING? OFFICE PARTY?
-          </h2>
-          <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-            Birthday? Wedding? Office party? No problem! We cater to all.
-            Cluck Clucks is your go-to for great chicken. It's so good your
-            guests will be cluckin' for joy! Let us cater your next event and
-            watch as we turn every bite into a feast for the tastebuds! Fill
-            out the form below or send us an email at{" "}
-            <span className="text-orange-600 font-bold">
-              Hello@cluckclucks.ca
-            </span>
-            .
-          </p>
+      <Parallax
+        bgImage={parallaxImg2}
+        strength={400}
+        className="w-full"
+      >
+        <div className="w-full py-12 flex flex-col md:flex-row max-w-7xl mx-auto gap-10 items-center justify-between">
+          {/* Left Content */}
 
-          <div className="space-y-8 w-full">
-            <div>
-              <button className="flex items-center text-orange-600 font-bold text-xl group hover:underline hover:underline-offset-4">
-                Order Now <span className="ml-2">&raquo;</span>
-              </button>
-              <div className="w-32 h-1 bg-orange-600 mt-2"></div>
+          <div className="flex-1 flex flex-col justify-center items-start text-left">
+            <h2 className="text-red-500 text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+              BIRTHDAY? WEDDING? OFFICE PARTY?
+            </h2>
+            <p className="text-amber-900 text-lg mb-8 leading-relaxed font-size: 19px line-height: 1.6em">
+              Birthday? Wedding? Office party? No problem! We cater to all.
+              Cluck Clucks is your go-to for great chicken. It's so good your
+              guests will be cluckin' for joy! Let us cater your next event and
+              watch as we turn every bite into a feast for the tastebuds! Fill
+              out the form below or send us an email at{" "}
+              <span className="text-red-500 font-bold">
+                Hello@cluckclucks.ca
+              </span>
+              .
+            </p>
+
+            <div className="space-y-8 w-full">
+              <div>
+                <button
+                  className="flex items-center font-bold transform transition-all duration-300 
+                 text-red-500 border-b-2 border-red-500 
+                 hover:scale-110 hover:text-[#5c2c00] hover:border-[#5c2c00] text-[18px]"
+                >
+                  Order Now <span className="ml-6">&raquo;</span>
+                </button>
+              </div>
+
+              <div>
+                <button
+                  className="flex items-center font-bold transform transition-all duration-300 
+                 text-red-500 border-b-2 border-red-500 
+                 hover:scale-110 hover:text-[#5c2c00] hover:border-[#5c2c00] text-[20px]"
+                >
+                  Request A Special Catering Order <span className="ml-2">&raquo;</span>
+                </button>
+              </div>
             </div>
 
-            <div>
-              <button className="flex items-center text-orange-600 font-bold text-xl group hover:underline hover:underline-offset-4">
-                Request A Special Catering Order <span className="ml-2">&raquo;</span>
-              </button>
-              <div className="w-56 h-1 bg-orange-600 mt-2"></div>
-            </div>
+          </div>
+
+          {/* Right Image */}
+          <div className="flex-1 flex justify-center items-stretch">
+            <img
+              src={heroImg}
+              alt="Catering Hero"
+              className="w-full h-[400px] md:h-[700px] max-w-2xl rounded-2xl object-cover shadow-lg"
+            />
           </div>
         </div>
-
-        {/* Right Image */}
-        <div className="flex-1 flex justify-center items-stretch">
-          <img
-            src={heroImg}
-            alt="Catering Hero"
-            className="w-full h-[400px] md:h-[700px] max-w-2xl rounded-2xl object-cover shadow-lg"
-          />
-        </div>
-      </div>
+      </Parallax>
 
       {/* ✅ Section 3 - Parallax Background with Images */}
+
+      <div className="w-full  bg-amber-400 py-4">
+        <CateringImages />
+      </div>
+      {/* Section 4 - Catering Form */}
       <Parallax
         bgImage={parallaxImg}
         strength={400}
         className="w-full"
       >
-        <div className="w-full py-16 bg-black/40">
-          <CateringImages />
+        <div className="w-full py-10">
+          <CateringForm />
         </div>
       </Parallax>
-
-      {/* Section 4 - Catering Form */}
-      <div className="w-full py-10">
-        <CateringForm />
-      </div>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 
 const CateringImages = () => {
   return (
-    <section className="w-full bg-amber-400 py-3">
+    <section className="w-full py-3">
       <div className="max-w-10xl mx-auto px-4">
         {/* Grid layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
