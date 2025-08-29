@@ -4,7 +4,7 @@ import CateringImages from "../components/cateringImages";
 import CateringForm from "../components/cateringForm";
 import heroImg from "../assets/images/hero-image.jpg";
 import parallaxImg from "../assets/images/cluck-background1.jpg";
-import parallaxImg2 from "../assets/images/para-background2.jpg";
+import background from "../assets/images/background-maincontent.jpg";
 
 const CateringPage = () => {
   return (
@@ -29,20 +29,27 @@ const CateringPage = () => {
         </h1>
       </div>
 
-      {/* Section 2 - Split layout */}
-      <Parallax
-        bgImage={parallaxImg2}
-        strength={400}
-        className="w-full"
-      >
-        <div className="w-full py-12 flex flex-col md:flex-row max-w-7xl mx-auto gap-10 items-center justify-between">
-          {/* Left Content */}
+      {/* Section 2 - Split layout with blurred background */}
+      <div className="relative w-full">
+        {/* 🔥 Background Layer (blurred only) */}
+        <div
+          className="absolute inset-0 bg-no-repeat bg-fixed 
+               bg-[length:250px_auto,100px_auto] 
+               bg-[position:calc(0%_-_80px)_40%,100%_calc(0%_-_7px)] 
+               opacity-20"
+          style={{
+            backgroundImage: `url(${background}), url(${background})`,
+          }}
+        />
 
+        {/* 🌟 Foreground Content (not blurred) */}
+        <div className="relative w-full py-12 flex flex-col md:flex-row max-w-7xl mx-auto gap-10 items-center justify-between">
+          {/* Left Content */}
           <div className="flex-1 flex flex-col justify-center items-start text-left">
             <h2 className="text-red-500 text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
               BIRTHDAY? WEDDING? OFFICE PARTY?
             </h2>
-            <p className="text-amber-900 text-lg mb-8 leading-relaxed font-size: 19px line-height: 1.6em">
+            <p className="text-amber-900 text-lg mb-8 leading-relaxed">
               Birthday? Wedding? Office party? No problem! We cater to all.
               Cluck Clucks is your go-to for great chicken. It's so good your
               guests will be cluckin' for joy! Let us cater your next event and
@@ -58,8 +65,8 @@ const CateringPage = () => {
               <div>
                 <button
                   className="flex items-center font-bold transform transition-all duration-300 
-                 text-red-500 border-b-2 border-red-500 
-                 hover:scale-110 hover:text-[#5c2c00] hover:border-[#5c2c00] text-[18px]"
+                    text-red-500 border-b-2 border-red-500 
+                    hover:scale-110 hover:text-[#5c2c00] hover:border-[#5c2c00] text-[18px]"
                 >
                   Order Now <span className="ml-6">&raquo;</span>
                 </button>
@@ -68,14 +75,14 @@ const CateringPage = () => {
               <div>
                 <button
                   className="flex items-center font-bold transform transition-all duration-300 
-                 text-red-500 border-b-2 border-red-500 
-                 hover:scale-110 hover:text-[#5c2c00] hover:border-[#5c2c00] text-[20px]"
+                    text-red-500 border-b-2 border-red-500 
+                    hover:scale-110 hover:text-[#5c2c00] hover:border-[#5c2c00] text-[20px]"
                 >
-                  Request A Special Catering Order <span className="ml-2">&raquo;</span>
+                  Request A Special Catering Order{" "}
+                  <span className="ml-2">&raquo;</span>
                 </button>
               </div>
             </div>
-
           </div>
 
           {/* Right Image */}
@@ -87,23 +94,29 @@ const CateringPage = () => {
             />
           </div>
         </div>
-      </Parallax>
+      </div>
 
       {/* ✅ Section 3 - Parallax Background with Images */}
-
-      <div className="w-full  bg-amber-400 py-4">
+      <div className="w-full bg-amber-400 py-4">
         <CateringImages />
       </div>
+
       {/* Section 4 - Catering Form */}
-      <Parallax
-        bgImage={parallaxImg}
-        strength={400}
-        className="w-full"
+      {/* Section 4 - Catering Form with fixed background logos */}
+      <div
+        className="relative w-full py-10 bg-fixed bg-no-repeat bg-[length:auto_900px,contain] 
+             bg-[position:bottom_left,bottom_right]"
+        style={{
+          backgroundImage: `
+      url('https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/ctsazijb/ac1bb47a-11e5-4f75-9388-9c7a555da425.png'),
+      url('https://popmenucloud.com/ctsazijb/eddd21fa-4a99-460f-bf15-1b629b860087.png')
+    `,
+        }}
       >
-        <div className="w-full py-10">
+        <div className="max-w-4xl mx-auto">
           <CateringForm />
         </div>
-      </Parallax>
+      </div>
     </div>
   );
 };
